@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gestion des Tâches</title>
 
-    <!-- ✅ Bootstrap local (chez toi : css/bootstrap.css) -->
+
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <?php

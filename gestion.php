@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <?php
-// gestion.php
-// Stockage JSON dans tache.json (même dossier)
+
 $file = __DIR__ . "/tache.json";
 
-// Créer le fichier s'il n'existe pas
+
 if (!file_exists($file)) {
     file_put_contents($file, json_encode([], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
@@ -35,11 +34,11 @@ function nettoyer(string $s): string {
 
 $taches = lireTaches($file);
 
-// ----------------- ACTIONS (ADD / EDIT / DELETE) -----------------
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $action = $_POST["action"] ?? "";
 
-    // Statuts autorisés
+
     $statutsAutorises = ["En cours", "Terminée", "En attente"];
 
     if ($action === "add") {
@@ -103,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-// ----------------- MODE ÉDITION (GET ?edit=id) -----------------
+
 $editId = isset($_GET["edit"]) ? (int)$_GET["edit"] : 0;
 $tacheAEditer = null;
 
@@ -116,7 +115,7 @@ if ($editId > 0) {
     }
 }
 
-// Statut actuel pour le select
+
 $statutActuel = $tacheAEditer["statut"] ?? "En cours";
 ?>
 <body class="bg-light">

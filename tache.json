@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "titre": "tache 1 faire les exos",
+        "description": "faire les exos",
+        "statut": "En cours"
+    },
+    {
+        "id": 2,
+        "titre": "faire les impressions",
+        "description": "imprimer la liste des etudiants",
+        "statut": "Terminée"
+    },
+    {
+        "id": 3,
+        "titre": "test tache 3",
+        "description": "-",
+        "statut": "En attente"
+    }
+]
